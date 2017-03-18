@@ -1,24 +1,25 @@
 import React from "react";
 
-class Content extends React.Component {
+class PropsValidation extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>{ this.props.title }</h2>
-				<p> { this.props.body } </p>
+				<h3>PropsValidation</h3>
+				<p>{ this.props.title }</p>
+				<p>{ this.props.body }</p>
 			</div>
 		);
 	}
 }
 
-Content.propTypes = {
+PropsValidation.propTypes = {
 	title: React.PropTypes.string,
 	body: React.PropTypes.string.isRequired
 	/* If body is null, see error on your browser console */
 };
 
 /** VALIDATION SAMPLE
- Content.propTypes = {
+ PropsValidation.propTypes = {
 
 	// JS primitive types
 	optionalArray: React.PropTypes.array,
@@ -67,9 +68,9 @@ Content.propTypes = {
 	// custom validator
 	customProp: function (props, propName, componentName) {
 		if (!/matchme/.test(props[propName])) {
-			return new Error('Validation failed!');
+			return new Error('PropsValidation failed!');
 		}
 	}
 };
  */
-export default Content;
+export default PropsValidation;

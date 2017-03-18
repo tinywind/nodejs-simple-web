@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Content from "./Content";
-import StateExample from "./StateExample";
-import RandomNumber from "./RandomNumber";
+import PropsValidation from "./Validation";
+import IteratedStateValue from "./IteratedStateValue";
+import StateSelfChange from "./StateSelfChange";
+import StateSuperChange from "./StateSuperChange";
 
 class App extends React.Component {
 
@@ -25,10 +25,15 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header title={ this.props.headerTitle }/>
-				<Content title={ this.props.contentTitle } body={ this.props.contentBody }/>
-				<StateExample/>
-				<RandomNumber number={this.state.value} onUpdate={this.updateValue}/>
+				<hr/>
+				<IteratedStateValue/>
+				<hr/>
+				<StateSuperChange number={this.state.value} onUpdate={this.updateValue}/>
+				<hr/>
+				<StateSelfChange/>
+				<hr/>
+				<PropsValidation title={ this.props.contentTitle } body={ this.props.contentBody }/>
+				<hr/>
 			</div>
 		);
 	}

@@ -1,12 +1,11 @@
 import React from "react";
 
-class StateExample extends React.Component {
+class StateSelfChange extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			header: "Header Initial state",
-			content: "Content Initial State"
+			header: "Initial state"
 		};
 
 		this.updateHeader = this.updateHeader.bind(this);
@@ -21,8 +20,9 @@ class StateExample extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>{this.state.header}</h1>
-				<h2>{this.state.content}</h2>
+				<h3>StateSelfChange</h3>
+				<p>{this.state.header}</p>
+				{/* same: <button onClick={this.updateHeader.bind(this)}>Button 1</button> */}
 				<button onClick={this.updateHeader}>Button 1</button>
 				<button onClick={this.updateHeader}>Button 2</button>
 			</div>
@@ -30,4 +30,4 @@ class StateExample extends React.Component {
 	}
 }
 
-export default StateExample;
+export default StateSelfChange;

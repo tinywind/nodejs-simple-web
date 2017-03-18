@@ -1,6 +1,6 @@
 import React from "react";
 
-class RandomNumber extends React.Component {
+class StateSuperChange extends React.Component {
 	updateNumber() {
 		let value = Math.round(Math.random() * 100);
 		this.props.onUpdate(value);
@@ -14,11 +14,12 @@ class RandomNumber extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>RANDOM NUMBER: { this.props.number }</h1>
+				<h3>StateSuperChange</h3>
+				<p>RANDOM NUMBER: { this.props.number }</p>
 				<button onClick={this.updateNumber}>Randomize</button>
 			</div>
 		);
 	}
 }
 
-export default RandomNumber;
+export default StateSuperChange;
