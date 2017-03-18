@@ -32,7 +32,7 @@ class IteratedStateValue extends React.Component {
 	}
 
 	_removeContact() {
-		if (this.state.selectedKey == -1) {
+		if (this.state.selectedKey === -1) {
 			console.log("contact not selected");
 			return;
 		}
@@ -44,7 +44,7 @@ class IteratedStateValue extends React.Component {
 	}
 
 	_onSelect(key) {
-		if (key == this.state.selectedKey) {
+		if (key === this.state.selectedKey) {
 			console.log("key select cancelled");
 			this.setState({selectedKey: -1, selected: {name: "", phone: ""}});
 			return;
@@ -55,7 +55,7 @@ class IteratedStateValue extends React.Component {
 	}
 
 	_isSelected(key) {
-		return this.state.selectedKey == key;
+		return this.state.selectedKey === key;
 	}
 
 	render() {
@@ -69,7 +69,7 @@ class IteratedStateValue extends React.Component {
 				</ul>
 				<ContactCreator onInsert={this._insertContact.bind(this)}/>
 				<ContactRemover onRemove={this._removeContact.bind(this)}/>
-				<ContactEditor onEdit={this._editContact.bind(this)} isSelected={(this.state.selectedKey != -1)} contact={this.state.selected}/>
+				<ContactEditor onEdit={this._editContact.bind(this)} isSelected={(this.state.selectedKey !== -1)} contact={this.state.selected}/>
 			</div>
 		);
 	}
@@ -81,7 +81,7 @@ class ContactInfo extends React.Component {
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		return (JSON.stringify(nextProps) != JSON.stringify(this.props));
+		return (JSON.stringify(nextProps) !== JSON.stringify(this.props));
 	}
 
 	render() {
