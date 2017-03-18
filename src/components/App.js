@@ -1,6 +1,7 @@
 import React from "react";
 import PropsValidation from "./Validation";
 import IteratedStateValue from "./IteratedStateValue";
+import UsingRef from "./UsingRef";
 import StateSelfChange from "./StateSelfChange";
 import StateSuperChange from "./StateSuperChange";
 
@@ -10,7 +11,7 @@ class App extends React.Component {
 		super(props);
 
 		this.state = {
-			value: Math.round(Math.random()*100)
+			value: Math.round(Math.random() * 100)
 		};
 
 		this.updateValue = this.updateValue.bind(this);
@@ -25,6 +26,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
+				<hr/>
+				<UsingRef/>
 				<hr/>
 				<IteratedStateValue/>
 				<hr/>
