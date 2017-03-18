@@ -62,7 +62,6 @@ class IteratedStateValue extends React.Component {
 		console.log("rendered: " + this.props.name);
 		return (
 			<div>
-				<h3>IteratedStateValue</h3>
 				<ul>
 					{this.state.contactData.map((contact, i) => {
 						return (<ContactInfo name={contact.name} phone={contact.phone} key={i} contactKey={i} isSelected={this._isSelected.bind(this)(i)} onSelect={this._onSelect.bind(this)}/>);

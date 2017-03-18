@@ -20,7 +20,6 @@ class StateSelfChange extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>StateSelfChange</h3>
 				<p>{this.state.header}</p>
 				{/* same: <button onClick={this.updateHeader.bind(this)}>Button 1</button> */}
 				<button onClick={this.updateHeader}>Button 1</button>

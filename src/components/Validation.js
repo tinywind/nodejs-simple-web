@@ -4,7 +4,6 @@ class PropsValidation extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>PropsValidation</h3>
 				<p>{ this.props.title }</p>
 				<p>{ this.props.body }</p>
 			</div>

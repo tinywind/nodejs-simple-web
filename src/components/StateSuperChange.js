@@ -14,7 +14,6 @@ class StateSuperChange extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>StateSuperChange</h3>
 				<p>RANDOM NUMBER: { this.props.number }</p>
 				<button onClick={this.updateNumber}>Randomize</button>
 			</div>

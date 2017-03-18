@@ -1,5 +1,6 @@
 import React from "react";
 import PropsValidation from "./Validation";
+import FunctionalComponent from "./FunctionalComponent";
 import IteratedStateValue from "./IteratedStateValue";
 import UsingRef from "./UsingRef";
 import StateSelfChange from "./StateSelfChange";
@@ -26,17 +27,34 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<hr/>
+				<Title title="FunctionalComponent"/>
+				<FunctionalComponent name="FunctionalComponent"/>
+
+				<Title title="UsingRef"/>
 				<UsingRef/>
-				<hr/>
+
+				<Title title="IteratedStateValue"/>
 				<IteratedStateValue/>
-				<hr/>
+
+				<Title title="StateSuperChange"/>
 				<StateSuperChange number={this.state.value} onUpdate={this.updateValue}/>
-				<hr/>
+
+				<Title title="StateSelfChange"/>
 				<StateSelfChange/>
-				<hr/>
+
+				<Title title="PropsValidation"/>
 				<PropsValidation title={ this.props.contentTitle } body={ this.props.contentBody }/>
+			</div>
+		);
+	}
+}
+
+class Title extends React.Component {
+	render() {
+		return (
+			<div>
 				<hr/>
+				<h3>{this.props.title}</h3>
 			</div>
 		);
 	}

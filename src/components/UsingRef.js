@@ -9,7 +9,6 @@ class UsingRef extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>UsingRef</h3>
 				<input ref={newValue => this.input = newValue}/>
 				<button onClick={this.handleClick.bind(this)}>Click Me</button>
 			</div>
