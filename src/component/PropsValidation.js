@@ -1,20 +1,20 @@
 import React from "react";
 
 class PropsValidation extends React.Component {
-	render() {
-		return (
-			<div>
-				<p>{ this.props.title }</p>
-				<p>{ this.props.body }</p>
-			</div>
-		);
-	}
+    render() {
+        return (
+            <div>
+                <p>{ this.props.title }</p>
+                <p>{ this.props.body }</p>
+            </div>
+        );
+    }
 }
 
 PropsValidation.propTypes = {
-	title: React.PropTypes.string,
-	body: React.PropTypes.string.isRequired
-	/* If body is null, see error on your browser console */
+    title: React.PropTypes.string,
+    body: React.PropTypes.string.isRequired
+    /* If body is null, see error on your browser console */
 };
 
 /** VALIDATION SAMPLE

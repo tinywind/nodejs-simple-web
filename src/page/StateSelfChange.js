@@ -1,32 +1,32 @@
 import React from "react";
 
 class StateSelfChange extends React.Component {
-	constructor(props) {
-		super(props);
+    constructor(props) {
+        super(props);
 
-		this.state = {
-			header: "Initial state"
-		};
+        this.state = {
+            header: "Initial state"
+        };
 
-		this.updateHeader = this.updateHeader.bind(this);
-	}
+        this.updateHeader = this.updateHeader.bind(this);
+    }
 
-	updateHeader(e) {
-		this.setState({
-			header: "Clicked: " + e.target.textContent
-		});
-	}
+    updateHeader(e) {
+        this.setState({
+            header: "Clicked: " + e.target.textContent
+        });
+    }
 
-	render() {
-		return (
-			<div>
-				<p>{this.state.header}</p>
-				{/* same: <button onClick={this.updateHeader.bind(this)}>Button 1</button> */}
-				<button onClick={this.updateHeader}>Button 1</button>
-				<button onClick={this.updateHeader}>Button 2</button>
-			</div>
-		);
-	}
+    render() {
+        return (
+            <div>
+                <p>{this.state.header}</p>
+                {/* same: <button onClick={this.updateHeader.bind(this)}>Button 1</button> */}
+                <button onClick={this.updateHeader}>Button 1</button>
+                <button onClick={this.updateHeader}>Button 2</button>
+            </div>
+        );
+    }
 }
 
 export default StateSelfChange;

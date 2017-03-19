@@ -3,30 +3,30 @@
   "version": "1.0.0",
   "description": "",
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/tinywind/nodejs-simple-web.git"
+    "type": "git",
+    "url": "git+https://github.com/tinywind/nodejs-simple-web.git"
   },
   "author": "tinywind0@gmail.com",
   "license": "MIT",
   "bugs": {
-	"url": "https://github.com/tinywind/nodejs-simple-web/issues"
+    "url": "https://github.com/tinywind/nodejs-simple-web/issues"
   },
   "homepage": "https://github.com/tinywind/nodejs-simple-web#readme",
   "private": true,
   "dependencies": {
-	"react": "^15.4.2",
-	"react-addons-update": "^15.4.2",
-	"react-dom": "^15.4.2",
-	"react-router": "^4.0.0",
-	"react-router-dom": "^4.0.0"
+    "react": "^15.4.2",
+    "react-addons-update": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
-	"react-scripts": "0.9.5"
+    "react-scripts": "^0.9.5"
   },
   "scripts": {
-	"start": "react-scripts start",
-	"build": "react-scripts build",
-	"test": "react-scripts test --env=jsdom",
-	"eject": "react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
