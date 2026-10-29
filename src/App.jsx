@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Routes, useParams} from "react-router";
 import UsingReduxPage from "./page/UsingReduxPage";
 import FunctionalComponentPage from "./page/FunctionalComponentPage";
 import UsingRef from "./page/UsingRef";
@@ -12,10 +12,12 @@ import NotFound from "./page/NotFound";
 import logo from "./logo.svg";
 import "./App.css";
 
+const PathValue = () => <div>{useParams().pathValue}</div>;
+
 class App extends Component {
     render() {
         return (
-            <Router>
+            <Router basename={import.meta.env.BASE_URL}>
                 <div className="App">
                     <div className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
@@ -41,25 +43,19 @@ class App extends Component {
                     </div>
                     <div className="App-intro">
 
-                        <Switch>
-                            <Route exact={true} path="/" render={() => (
-                                <h2>ROOT</h2>
-                            )}/>
-                            <Route path='/using-redux' component={UsingReduxPage}/>
-                            <Route path='/functional-component' component={FunctionalComponentPage}/>
-                            <Route path='/using-ref' component={UsingRef}/>
-                            <Route path='/iterated-state-value' component={IteratedStateValue}/>
-                            <Route path='/state-super-change' component={StateSuperChangePage}/>
-                            <Route path='/state-self-change' component={StateSelfChange}/>
-                            <Route path='/props-validation' component={PropsValidationPage}/>
-                            <Route path='/topic' component={Topic}/>
-                            <Route path='/path-value/:pathValue' render={({match}) => (
-                                <div>
-                                    {match.params.pathValue}
-                                </div>
-                            )}/>
-                            <Route component={NotFound}/>
-                        </Switch>
+                        <Routes>
+                            <Route path="/" element={<h2>ROOT</h2>}/>
+                            <Route path='/using-redux/*' element={<UsingReduxPage/>}/>
+                            <Route path='/functional-component/*' element={<FunctionalComponentPage/>}/>
+                            <Route path='/using-ref/*' element={<UsingRef/>}/>
+                            <Route path='/iterated-state-value/*' element={<IteratedStateValue/>}/>
+                            <Route path='/state-super-change/*' element={<StateSuperChangePage/>}/>
+                            <Route path='/state-self-change/*' element={<StateSelfChange/>}/>
+                            <Route path='/props-validation/*' element={<PropsValidationPage/>}/>
+                            <Route path='/topic/*' element={<Topic/>}/>
+                            <Route path='/path-value/:pathValue/*' element={<PathValue/>}/>
+                            <Route path='*' element={<NotFound/>}/>
+                        </Routes>
                     </div>
                 </div>
             </Router>
