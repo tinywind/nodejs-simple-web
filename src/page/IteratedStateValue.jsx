@@ -1,5 +1,5 @@
 import React from "react";
-import update from "react-addons-update";
+import update from "immutability-helper";
 
 class IteratedStateValue extends React.Component {
     constructor(props) {
@@ -150,7 +150,7 @@ class ContactEditor extends React.Component {
         this.state = {name: "", phone: ""};
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.setState({
             name: nextProps.contact.name,
             phone: nextProps.contact.phone

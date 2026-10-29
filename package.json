@@ -14,21 +14,26 @@
   "homepage": "https://github.com/tinywind/nodejs-simple-web#readme",
   "private": true,
   "dependencies": {
-    "react": "^15.4.2",
-    "react-addons-update": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
-    "react-router": "^4.0.0",
-    "react-router-dom": "^4.0.0",
-    "redux": "^3.6.0"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-redux": "^9.3.0",
+    "react-router": "^8.5.1",
+    "redux": "^5.0.1",
+    "immutability-helper": "^3.1.1",
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
-    "react-scripts": "^0.9.5"
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5",
+    "jsdom": "^30.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   }
 }
